@@ -60,3 +60,13 @@ h1 {
     display: block;
 
 }
+
+.menu_list_badge_vegan {
+    background-color: #DD7835;
+    color: #000000;
+    font-size: 12px;
+    padding: 3px 8px;
+    font-weight: bolder;
+    border-radius: 16px;
+
+}
