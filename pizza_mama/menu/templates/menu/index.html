@@ -1,28 +1,28 @@
 {% load static %}
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Menu pizzas</title>
-    <link rel="stylesheet" href="{% static 'menu/style.css' %}">
-</head>
-<body>
-    <img id="small_logo" src="{% static 'menu/images/small_logo.png' %}" alt="">
-    <div class="menu_title">
-        <h1>Pizza</h1>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Menu pizzas</title>
+        <link rel="stylesheet" href="{% static 'menu/style.css' %}">
+    </head>
+    <body>
+        <img id="small_logo" src="{% static 'menu/images/small_logo.png' %}" alt="">
+        <div class="menu_title">
+            <h1>Pizza</h1>
+        </div>
 
-    <div class="menu_list">
-        {% for pizza in pizzas %}
-            <div class="menu_list_item">
-                <span class="menu_list_title">{{pizza.name}}</span>
-                <span class="menu_list_price">{{pizza.price | floatformat:2}}$</span>
-                <span class="menu_list_ingredients">{{pizza.ingredients}}</span>
-                {% if pizza.vegetarian %}
-                    <span class="menu_list_badge_vegan">VEGETARIAN</span>
-                {% endif %}
-            </div>
-        {% endfor %}
-    </div>
-</body>
+        <div class="menu_list">
+            {% for pizza in pizzas %}
+                <div class="menu_list_item">
+                    <span class="menu_list_title">{{pizza.name}}</span>
+                    <span class="menu_list_price">{{pizza.price | floatformat:2}}$</span>
+                    <span class="menu_list_ingredients">{{pizza.ingredients}}</span>
+                    {% if pizza.vegetarian %}
+                        <span class="menu_list_badge_vegan">VEGETARIAN</span>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </body>
 </html >
